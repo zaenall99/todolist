@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Container utama */
+.navTodo {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+/* Kotak isi */
+.container {
+    width: 50%;
+    background: #838b93d6;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative; /* Supaya foto bisa pos absolute */
+ 
+}
+
+/* Foto berada di kanan atas */
+.foto {
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+
+    /* ✅ Ini bagian penting */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+/* Filter tanggal */
+
+
+.tglNOW {
+    margin-top: 45px; /* supaya tidak ketutup foto */
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+      
+}
+.input-field {
+    display: flex;
+    flex-direction: column; /* <-- ini yang bikin jadi column */
+    gap: 10px; /* jarak antar item */
+}
+/* Input tugas */
+.tugas input,
+.tugas select,
+.tugas button {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    flex-direction: column;
+}
+
+/* Button Tambah */
+.btnTambah {
+    background: #005eff;
+    color: white;
+    cursor: pointer;
+}
+
+.btnTambah:hover {
+    background: #003eb8;
+}
+
+/* Button Hapus Semua */
+.btnHapusAll {
+    margin-top: 12px;
+    background: #e04747;
+    color: white;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btnHapusAll:hover {
+    background: #b93535;
+}
+
+#todoList {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
