@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>To Do List Tugas 4</title>
+</head>
+
+<body>
+
+    <div class="navTodo">
+        <div class="container">
+           <div class="profile">
+    <img id="profilFoto" src="Ellipse 395.png" class="foto" style="cursor:pointer;">  
+</div>
+
+<ul id="todoList"></ul>
+<ul id="doneList"></ul>
+
+            <div class="tglNOW">
+                <p>Filter Tanggal :</p>
+                <label for="tanggalFilter">Lihat ToDo di Tanggal
+                <input type="date" id="tanggalFilter" class="ml-2 p-1 rounded text-black"></label>
+            </div>
+
+         
+            <form id="todoForm" class="tugas">
+                <div class="input-field">
+                    <input type="text" id="tugas" placeholder="Tulis tugas disini....">
+
+                    <select id="level" class="p-1 rounded border text-black">
+                        <option value="">Pilih Prioritas</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Expert">Hight</option>
+                    </select>
+
+                    <label for="deadline">Deadline</label>
+                    <input type="date" id="deadline">
+
+                    <button type="submit" class="btnTambah">Tambah Tugas</button>
+                </div>
+            </form>
+
+            <div class="listTugas"></div>
+
+            <div class="headerList">
+                <p>To Do</p>
+                <button class="btnHapusAll">Hapus Semua</button>
+            </div>
+
+            <ul id="todoList"></ul>
+
+            <p>DONE :</p>
+            <ul id="doneList"></ul>
+
+        </div>
+    </div>
+
+
+<script src="tod.js"></script>
+
+</body>
+</html>
